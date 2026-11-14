@@ -2,26 +2,32 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>reCAPTCHA設置テスト</title>
-    <!-- 1. GoogleのreCAPTCHA用スクリプトを読み込みます -->
-    <script src="https://google.com" async defer></script>
+
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
-    <!-- フォームのサンプルです -->
-    <form action="送信先のプログラム.php" method="POST">
-        
+    <h1>reCAPTCHA設置テスト</h1>
+
+    <form action="#" method="POST">
+
         <p>
             <label for="name">お名前：</label><br>
             <input type="text" id="name" name="name" required>
         </p>
 
-        <!-- 2. チェックボックスを表示したい場所にこのdivタグを配置します -->
-        <!-- 「あなたのサイトキー」の部分を取得したサイトキーに書き換えてください -->
-        <div class="6LcbYR8uAAAAAE0bmQMDg0b9G03tzkUrHEEMsoqv"></div>
+        <!-- reCAPTCHA v2 -->
+        <div class="g-recaptcha"
+             data-sitekey="6LcbYR8uAAAAAE0bmQMDg0b9G03tzkUrHEEMsoqv">
+        </div>
 
         <br>
+
         <button type="submit">送信する</button>
+
     </form>
 
 </body>
